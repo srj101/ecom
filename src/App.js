@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./Component/header/header.component";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { StyleReset } from "atomize";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact>
+            <StyleReset />
             <Header />
             <div> Content </div>
           </Route>
