@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  width: 96vw;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header_container {
+  box-shadow: 0 0 3px #ddd;
+}

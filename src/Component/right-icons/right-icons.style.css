@@ -1,0 +1,7 @@
+.right-icons {
+  display: flex;
+}
+.right-icon {
+  padding: 0 6px;
+  cursor: pointer;
+}

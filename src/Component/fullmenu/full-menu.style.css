@@ -1,0 +1,74 @@
+.full-menu > svg {
+  cursor: pointer;
+}
+.overlay__menu_showed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.3s;
+}
+
+.overlay__menu_hidden {
+  width: 0;
+  left: 50%;
+  top: 50%;
+  height: 0;
+  opacity: 0;
+}
+
+.menu-close {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  cursor: pointer;
+  color: #000;
+}
+
+.menu__list {
+  width: 40vw;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu__item a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #222;
+  transition: 0.3s;
+  padding: 5px 0;
+}
+
+.menu__item {
+  padding: 10px 0;
+}
+
+.menu__item a:hover {
+  border-bottom: 5px solid #222;
+}
+
+.menu-close {
+  color: #222;
+  right: 3%;
+  top: 6%;
+  background: #000;
+  color: #fff;
+  padding: 10px 14px;
+}
+.sub_menu__item {
+  display: table;
+  margin: 0 auto;
+}
+
+.sub_menu__item a {
+  font-size: 25px;
+  display: block;
+  padding: 8px 0;
+}
