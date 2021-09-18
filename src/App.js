@@ -1,7 +1,9 @@
+import "antd/dist/antd.css";
 import "./App.css";
 import Header from "./Component/header/header.component";
+import NewArivals from "./Component/newarivals/newarivals.component.jsx";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { StyleReset } from "atomize";
 
 function App() {
   return (
@@ -9,9 +11,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact>
-            <StyleReset />
             <Header />
-            <div> Content </div>
+            <NewArivals />
           </Route>
         </Switch>
       </Router>

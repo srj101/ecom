@@ -7,6 +7,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 999;
   opacity: 1;
   background: rgba(255, 255, 255, 0.9);
   transition: 0.3s;
@@ -29,7 +30,7 @@
 }
 
 .menu__list {
-  width: 40vw;
+  width: 300px;
   margin: auto;
   height: 100vh;
   display: flex;
@@ -63,8 +64,14 @@
   padding: 10px 14px;
 }
 .sub_menu__item {
+  left: -9999px;
   display: table;
   margin: 0 auto;
+  position: absolute;
+  transition: left 0.5s ease-in-out;
+}
+.sub_menu__item.show {
+  position: inherit;
 }
 
 .sub_menu__item a {

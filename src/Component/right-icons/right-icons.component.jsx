@@ -1,41 +1,18 @@
 import React, { useState } from "react";
 import "./right-icons.style.css";
-import PersonIcon from "@material-ui/icons/Person";
-import SearchIcon from "@material-ui/icons/Search";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { Drawer } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import PersonIcon from "@mui/icons-material/Person";
+import Drawers from "../Drawers/Drawers.component";
 
 const RightIcons = () => {
-  const [showDrawer, setShowDrawer] = useState(false);
-  const toggleDrawer = (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
-    setShowDrawer(!showDrawer);
-  };
-
   return (
     <>
-      <div className="right-icons">
+      <div className="right-icons" id="ok">
         <div className="right-icon">
           <SearchIcon />
         </div>
         <div className="right-icon">
-          <FavoriteBorderIcon onClick={toggleDrawer} />
-          <Drawer
-            anchor="right"
-            open={showDrawer}
-            transitionDuration="3000"
-            onClose={toggleDrawer}
-            className="drawer"
-          >
-            Hello motherfucker!
-          </Drawer>
+          <Drawers icon="FavoriteBorderIcon" data="wishlist" title="Wishlist" />
         </div>
 
         <div className="right-icon">
@@ -43,7 +20,7 @@ const RightIcons = () => {
         </div>
 
         <div className="right-icon">
-          <ShoppingCartIcon />
+          <Drawers icon="ShoppingCartIcon" data="cart" title="Cart" />
         </div>
       </div>
     </>
