@@ -7,3 +7,12 @@ body {
   font-family: "Work Sans", sans-serif;
   background: #f2f0f1;
 }
+.main {
+  width: 100vw;
+  overflow: hidden;
+}
+div#root {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}

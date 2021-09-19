@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const FullMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const shopMenu = document.querySelector(".shop");
   const subofShop = document.querySelector(".sub_menu__item");
 
   const handleClick = (e) => {
@@ -37,18 +36,18 @@ const FullMenu = () => {
             <Link to="/">Home</Link>
           </div>
           <div className="menu__item">
-            <Link to="/">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </div>
           <div className="menu__item" onClick={showSub}>
             <Link to="/">Pages</Link>
             <div className="sub_menu__item menu__item">
-              <Link to="/">About Us</Link>
-              <Link to="/">FAQ</Link>
-              <Link to="/">Contact Us</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/faq">FAQ</Link>
+              <Link to="/contact">Contact Us</Link>
             </div>
           </div>
           <div className="menu__item">
-            <Link to="/">Blog</Link>
+            <Link to="/blog">Blog</Link>
           </div>
         </div>
       </div>
