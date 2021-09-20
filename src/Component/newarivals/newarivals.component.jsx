@@ -4,7 +4,6 @@ import { useQuery, gql } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { Spin, message } from "antd";
 import Slider from "react-slick";
-import Typical from "react-typical";
 
 const NEW_ARIVALS = gql`
   query {
@@ -23,7 +22,7 @@ const NewArivals = () => {
     infinite: true,
     speed: 1000,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: false,
@@ -57,17 +56,22 @@ const NewArivals = () => {
   if (error) {
     return error.message;
   }
+  const key = "updatable";
   const success = () => {
-    const hide = message.loading("Action in progress..", 0);
-    // Dismiss manually and asynchronously
-    setTimeout(hide, 2500);
+    message.loading({ content: "Loading...", key });
+    setTimeout(() => {
+      message.success({
+        content: "Loaded!",
+        key,
+        duration: 2,
+      });
+    }, 1000);
   };
   return (
     <div className="carousel-container-home">
+      {success()}
       {loading ? (
-        <Spin className="carousel-spinner" spinning={loading}>
-          {success()}
-        </Spin>
+        <Spin className="carousel-spinner" spinning={loading}></Spin>
       ) : (
         <Slider {...settings}>
           {data.categories
@@ -76,13 +80,7 @@ const NewArivals = () => {
               <div key={image[1]} className="single-item-home">
                 <img src={image[1]} />
                 <div className="slider-content">
-                  <h1>
-                    <Typical
-                      steps={["FUCK YOUR ", 2000, "SHOPPING!", 500]}
-                      loop={Infinity}
-                      wrapper="p"
-                    />
-                  </h1>
+                  <h1>FUCK YOUR SHOPPING!</h1>
                   <Link to={`/shop/category/${image[0]}`} className="shop-now">
                     Shop Now!
                   </Link>

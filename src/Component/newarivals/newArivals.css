@@ -27,15 +27,16 @@
   transform: translate(-50%, -50%);
 }
 
-.slider-content {
+.carousel-container-home .slider-content {
   position: absolute;
   bottom: 5%;
   left: 35%;
   z-index: 6;
   transform: translate(-50%, -50%);
   color: #fff;
+  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
-  height: 130px;
+  height: 160px;
   padding: 25px;
 }
 button.slick-arrow.slick-next {
@@ -54,8 +55,22 @@ a.shop-now {
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a.shop-now:hover {
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
 }
 .slider-content h1 {
   color: #fff;
   text-transform: capitalize;
+  margin-bottom: 25px;
+}
+.carousel-container-home button.slick-arrow:before {
+  font-size: 45px;
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  height: 45px;
+  width: 45px;
 }

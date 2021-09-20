@@ -3,23 +3,26 @@
 }
 .overlay__menu_showed {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   z-index: 999;
   opacity: 1;
   background: rgba(255, 255, 255, 0.9);
-  transition: left 0.8s;
+  transition-property: right, height, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .overlay__menu_hidden {
   width: 0;
-  left: 50%;
-  top: 50%;
+  right: -100%;
+  top: -100%;
   height: 0;
   opacity: 0;
   z-index: -999;
+  position: fixed;
 }
 
 .menu-close {
@@ -88,4 +91,13 @@
   font-size: 25px;
   display: block;
   padding: 8px 0;
+}
+.menu-close {
+  transition: 0.3s;
+}
+.menu-close:hover {
+  transform: rotate(360deg);
+  color: #000;
+  background: #fff;
+  border: 1px solid #000;
 }

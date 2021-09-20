@@ -4,22 +4,31 @@ import "./header.style.css";
 import FullMenu from "../fullmenu/full-menu.component";
 import RightIcons from "../right-icons/right-icons.component";
 import Logo from "../../logo.png";
+import { Row, Col, Container } from "react-bootstrap";
 
 const Header = () => {
   return (
     <div className="header_container">
-      <div className="header">
-        {/* Menu Bar */}
-        <FullMenu />
-        {/* Logo Section */}
-        <div className="logo">
-          <Link to="/">
-            <img src={Logo} alt="ShoppingKorbo!" />
-          </Link>
-        </div>
-        {/* Search,Whitelist,Login,Cart */}
-        <RightIcons />
-      </div>
+      <Container>
+        <Row>
+          {/* Menu Bar */}
+          <Col>
+            <FullMenu />
+          </Col>
+          {/* Logo Section */}
+          <Col>
+            <div className="logo">
+              <Link to="/">
+                <img src={Logo} alt="ShoppingKorbo!" />
+              </Link>
+            </div>
+          </Col>
+          {/* Search,Whitelist,Login,Cart */}
+          <Col>
+            <RightIcons />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

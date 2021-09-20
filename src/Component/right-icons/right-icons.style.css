@@ -1,5 +1,6 @@
 .right-icons {
   display: flex;
+  justify-content: right;
 }
 .right-icon {
   padding: 0 6px;

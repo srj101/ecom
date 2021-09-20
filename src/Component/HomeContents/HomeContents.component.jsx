@@ -1,12 +1,7 @@
 import React from "react";
-import ProductMixItUp from "../ProductHome/ProductMixItUp.component";
 import "./homeComponent.styles.css";
 function HomeContents() {
-  return (
-    <div className="home-components">
-      <ProductMixItUp />
-    </div>
-  );
+  return <div className="home-components">ok</div>;
 }
 
 export default HomeContents;

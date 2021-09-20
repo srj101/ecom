@@ -1,6 +1,10 @@
 import React from "react";
 
 import "./shopHeader.style.css";
-
-const ShopHeader = () => <div>Hey I'm shop Header</div>;
+import BreadCrumb from "../../breadcrumb/breadcrumb.component";
+const ShopHeader = () => (
+  <div className="shop-header">
+    <BreadCrumb title="Shop" />
+  </div>
+);
 export default ShopHeader;

@@ -20,7 +20,6 @@ const FullMenu = () => {
     subofShop.classList.toggle("show");
   };
 
-  console.log(isMenuOpen);
   return (
     <div className="full-menu">
       <MenuIcon onClick={handleClick} />
@@ -29,7 +28,7 @@ const FullMenu = () => {
         className={isMenuOpen ? `overlay__menu_showed` : `overlay__menu_hidden`}
       >
         <div className="menu-close" onClick={closemenu}>
-          <span>X</span>
+          <span className="x">X</span>
         </div>
         <div className="menu__list">
           <div className="menu__item">
